@@ -1,1 +1,1 @@
-# truegrit-dining-bot
+GritMeals
