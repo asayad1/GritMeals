@@ -1,46 +1,87 @@
-/*
-This was in the <body> tag
-<center> <h1>Search For Your Favorite Foods:</h1>
-<form>
-  <div class="container">
-    <label>Enter a tag : </label>
-    <input type="submit" placeholder="Tag" name="username" required>
-    <button type="button" onclick="alert('Hello world!')">Click to Enter</button>
-  </div>
-</form>
-*/
-
 function Header()
 {
-    // Should a title go here?
     return (
-        <center>
-            <h1>Welcome to GritMeals!</h1>
-            <h2> Search For Your Favorite Foods: </h2> 
-        </center>
-    )
-}
+        <div>
+            <div className="landingPageFlexBox">
+                <img className="landingPageLogo" src="/Website/src/UMBCLogo.png"></img>
+                <h1 className="landingPageTitle">GritMeals</h1>          
+            </div>
 
-function Button()
-{
-    return (
-        <div> 
-            <center>
-                <input type="text" placeholder="Tag" name="username" required></input>
-                <button type="button" onclick="alert('Hello World!')"> Click to Enter </button>
-            </center>
+            <p className="landingPageDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu placerat lorem. Ut diam lorem, Nunc tempus, lectus quis ultricies sodales, ex sapien pellentesque libero, congue ullamcorper augue nibh ac eros.</p>
         </div>
     )
 }
 
-function MainContent()
+function EmailBox()
+{
+    return (
+        <div>
+            <input class="landingPageEmailBox" type="email" placeholder="Your Email Address"></input>   
+        </div>
+    )
+}
+
+function Buttons()
+{
+    return (
+        <div>
+            <button className="landingButtons" onClick={signIn}>GET STARTED</button>
+        </div>
+    )
+}
+
+
+function SideBar()
+{
+    return (
+        <div className="landingPageSideBar">
+        </div>
+    )    
+}
+
+
+function LeftColumn()
 {
     return(
         <div>
             <Header />
-            <Button />
+            <EmailBox />    
+            <Buttons />
         </div>
     )
 }
 
+function RightColumn()
+{
+    return (
+        <div className="landingPageInfoColumn">
+            <h1>A sentence goes here 1</h1>
+            <h1>A sentence goes here 2</h1>
+            <h1>A sentence goes here 3</h1>
+            <h1>A sentence goes here 4</h1>
+            <h1>A sentence goes here 5</h1>
+        </div>  
+    )
+}
+
+
+function MainContent()
+{
+    return (
+        <div className="landingPageContentDivider">
+            <LeftColumn />
+            <RightColumn />
+        </div>
+    )
+
+}
+
 ReactDOM.render(<MainContent />, document.getElementById("root"))
+
+
+
+//
+function signIn()
+{
+    alert("This leads to the sign in authentication page");
+}
