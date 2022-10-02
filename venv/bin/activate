@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/geneni/Developer/Workspace/Projects/hackUMBC/truegrits-dining-bot-2/venv"
+VIRTUAL_ENV="/Users/geneni/Developer/Workspace/Projects/hackUMBC/gritmeals/GritMeals/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

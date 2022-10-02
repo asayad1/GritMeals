@@ -4,7 +4,6 @@ import os
 import smtplib
 from datetime import date
 from email.mime.multipart import MIMEMultipart
-from prettytable import PrettyTable
 from email.mime.text import MIMEText
 
 
